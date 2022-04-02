@@ -286,6 +286,7 @@ div.popular-slider  {
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    padding-left: 20px;
   }
   .popular-slider .slick-dots li button {
     border: none;
