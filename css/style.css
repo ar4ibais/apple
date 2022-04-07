@@ -48,6 +48,11 @@ select {
   font: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   max-width: 1260px;
   margin: 0 auto;
@@ -61,6 +66,38 @@ select {
   margin-bottom: 50px;
   font-family: 'Open Sans', sans-serif;
   color: #000000;
+}
+
+.breadcrumbs {
+  padding-bottom: 6px;
+  margin-bottom: 50px;
+
+}
+
+.breadcrumbs__inner {
+  border-bottom: 1px solid #9F9E9E;
+  border-radius: 2px;
+}
+
+.breadcrumbs__item {
+  color: #9F9E9E;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 10px;
+  position: relative;
+}
+
+.breadcrumbs__item::after {
+  content: '/';
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #9F9E9E;
+}
+
+.breadcrumbs__item:last-child:after {
+  display: none;
 }
 
 .accessories {
@@ -166,6 +203,21 @@ select {
   text-align: center;
 }
 
+.categories__image {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #C7C7C7;
+  border-radius: 50%;
+  box-sizing: inherit;
+  transition: all .3s;
+}
+
+.categories__item:hover .categories__image {
+  border: 1px solid transparent;
+}
+
 .categories__subtitle {
   margin-bottom: 0;
   padding-top: 15px;
@@ -205,6 +257,10 @@ div.popular-slider  {
   display: none;
 }
 
+.accessories__grid {
+  display: none;
+}
+
 
 @media (max-width: 1276px) {
   .accessories__item--macbook {
@@ -213,7 +269,61 @@ div.popular-slider  {
   .accessories__item {
     padding: 30px 30px 32px;
   }
-  
+}
+
+@media (max-width: 1250px) {
+  .center__item {
+    width: 100%;
+  }
+  .center__item + .center__item {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1235px) {
+  .accessories__content {
+    display: none;
+  }
+  .accessories__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+  .accessories__grid-item {
+    text-align: center;
+  }
+  .accessories__grid-item img {
+    width: auto;
+    margin: 0 auto;
+  }
+  .accessories__grid-item--big {
+    grid-column: span 2;
+  }
+  .accessories__grid-item--macbook {
+    padding: 20px 20px 16px;
+    background-color: #EFFFF2;
+    border-radius: 6.20512px;
+  }
+  .accessories__grid-item--iphone {
+    padding: 10px 25px 13px;
+    background-color: #EFF4FF;
+    border-radius: 7.83465px;
+  }
+  .accessories__grid-item--ipad {
+    padding: 10px 18px;
+    background: #FFEFFA;
+    border-radius: 10.2064px;
+  }
+  .accessories__grid-item--watch {
+    padding: 10px 23px;
+    background: #FEFFEF;
+    border-radius: 9.24858px;
+  }
+  .accessories__grid-item--pods {
+    padding: 10px 28px;
+    background: #EFFFFD;
+    border-radius: 7.00756px;
+  }
 }
 
 @media (max-width: 1020px) {
@@ -241,6 +351,10 @@ div.popular-slider  {
   .accessories__item {
     min-height: 300px;
   }
+}
+
+@media (max-width: 840px) {
+  
 }
 
 @media (max-width: 590px) {
