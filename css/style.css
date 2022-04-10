@@ -174,11 +174,16 @@ a {
   padding: 40px 30px 30px;
   border-radius: 16px;
   width: 403px;
+  transition: all .3s;
 }
 
 .center__item img {
   width: auto;
   margin: 0 auto;
+}
+
+.center__item:hover {
+  background-color: #F2F2F2;
 }
 
 .center__subtitle {
